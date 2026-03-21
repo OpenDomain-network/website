@@ -1,0 +1,206 @@
+body {
+  background-color: rgb(9, 9, 9);
+  margin: 0;
+  min-height: 100vh;
+  color: rgb(231, 231, 231);
+  text-align: center;
+}
+
+.shadow {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: rgba(0, 0, 255, 0.35);
+  filter: blur(200px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  background: transparent;
+
+  transform: translateY(-100%);
+  transition: transform 1.2s ease;
+  z-index: 101;
+}
+
+.nav.show {
+  transform: translateY(0);
+}
+
+nav a {
+  position: relative;
+  font-family: "Pixelify Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* H1 */
+h1 {
+  margin-top: 150px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 110px;
+  color: white;
+}
+
+.discord h2 {
+  position: absolute;
+  top: 850px;
+  right: 500px;
+}
+
+h2 {
+  margin-top: 130px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 120px;
+  color: white;
+}
+
+/* Description */
+.description {
+  font-family: "Jersey 10", sans-serif;
+  font-size: 25px;
+  margin-top: -80px;
+  line-height: 1.2;
+
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+
+  width: 0ch;
+  position: relative;
+
+  animation: typing 2s steps(20, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 20ch; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+
+
+/* Responsywność na telefony (xd)
+@media (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+    margin-top: 80px;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-top: -40px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .shadow {
+    width: 400px;
+    height: 400px;
+    top: -40%;
+    filter: blur(150px);
+  }
+} */
+
+.getstart {
+  font-family: "Google Sans Code";
+  text-align: center;
+  margin: 130px 0;
+}
+
+/* Primary button - filled */
+.getbuy {
+  border-radius: 5px;
+  border: 0px solid #0066ff;
+  color: #fff;
+  background-color: rgba(0, 0, 255, 0.35);
+  padding: 15px 28px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.getbuy:hover {
+  border-radius: 7px;
+  color: #fff;
+  background-color: black;
+  border: 0px ;
+  box-shadow: 0 0 20px 8px rgba(0, 0, 255, 0.6);
+}
+
+/* Secondary button - outline with glow */
+.dashboard {
+  border-radius: 5px;
+  border: 0px solid #0066ff;
+  color: #fff;
+  background-color: rgba(0, 0, 255, 0.35);
+  padding: 15px 28px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.dashboard:hover {
+  border-radius: 7px;
+  color: #fff;
+  background-color: black;
+  border: 0px ;
+  box-shadow: 0 0 20px 8px rgba(0, 0, 255, 0.6);
+}
+
+.login {
+  position: absolute;
+  right: 20px;
+}
+
+
